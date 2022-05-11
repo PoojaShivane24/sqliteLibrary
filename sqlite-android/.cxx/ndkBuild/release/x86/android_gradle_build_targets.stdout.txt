@@ -1,0 +1,11 @@
+[x86] Compile++      : sqliteX <= android_database_SQLiteCommon.cpp
+[x86] Compile++      : sqliteX <= android_database_SQLiteConnection.cpp
+[x86] Compile++      : sqliteX <= android_database_SQLiteGlobal.cpp
+[x86] Compile++      : sqliteX <= android_database_SQLiteDebug.cpp
+[x86] Compile++      : sqliteX <= JNIHelp.cpp
+[x86] Compile++      : sqliteX <= JniConstants.cpp
+[x86] Compile        : sqliteX <= sqlite3secure.c
+[x86] Prebuilt       : libc++_shared.so <= <NDK>/sources/cxx-stl/llvm-libc++/libs/x86/
+[x86] SharedLibrary  : libsqliteX.so
+[x86] Compile        : sqlitefunctions <= extension-functions.c
+[x86] SharedLibrary  : libsqlitefunctions.so

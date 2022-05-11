@@ -1,0 +1,20 @@
+{
+  "ndkDirProperty": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk",
+  "sdkFolder": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk",
+  "sideBySideNdkFolderNames": [
+    "21.0.6113669",
+    "build",
+    "CHANGELOG.md",
+    "meta",
+    "platforms",
+    "prebuilt",
+    "python-packages",
+    "README.md",
+    "shader-tools",
+    "simpleperf",
+    "sources",
+    "sysroot",
+    "toolchains",
+    "wrap.sh"
+  ]
+}

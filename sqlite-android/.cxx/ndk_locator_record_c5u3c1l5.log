@@ -1,0 +1,146 @@
+[
+  {
+    "level": "INFO",
+    "message": "android.ndkVersion from module build.gradle is not set"
+  },
+  {
+    "level": "INFO",
+    "message": "ndk.dir in local.properties is C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk"
+  },
+  {
+    "level": "INFO",
+    "message": "ANDROID_NDK_HOME environment variable is not set"
+  },
+  {
+    "level": "INFO",
+    "message": "sdkFolder is C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk by ndk.dir"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669 in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\build in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\CHANGELOG.md in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\meta in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\platforms in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\prebuilt in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\python-packages in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\README.md in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\shader-tools in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\simpleperf in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\sources in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\sysroot in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\toolchains in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Considering C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\wrap.sh in SDK ndk folder"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669 in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\build in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\CHANGELOG.md in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\meta in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\platforms in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\prebuilt in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\python-packages in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\README.md in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\shader-tools in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\simpleperf in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\sources in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\sysroot in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\toolchains in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Rejected C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\wrap.sh in SDK ndk folder because that location has no source.properties"
+  },
+  {
+    "level": "INFO",
+    "message": "Found requested ndk.dir (C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk) which has version 21.0.6113669"
+  }
+]
