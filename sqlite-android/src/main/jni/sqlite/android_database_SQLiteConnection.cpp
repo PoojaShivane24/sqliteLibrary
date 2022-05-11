@@ -30,16 +30,7 @@
 #include <unistd.h>
 #include <assert.h>
 
-#if 0
-#include <androidfw/CursorWindow.h>
-#endif
-
 #include <sqlite3.h>
-#include <malloc.h>
-
-#if 0
-#include <sqlite3_android.h>
-#endif
 
 #include "android_database_SQLiteCommon.h"
 
@@ -64,6 +55,10 @@ namespace android {
  */
 static const int BUSY_TIMEOUT_MS = 2500;
 
+/* The original code uses AndroidRuntime::getJNIEnv() to obtain a 
+** pointer to the VM. This is not available in the NDK, so instead
+** the following global variable is set as part of this module's
+** JNI_OnLoad method.  */
 static JavaVM *gpJavaVM = 0;
 
 static struct {
@@ -75,6 +70,28 @@ static struct {
 static struct {
     jclass clazz;
 } gStringClassInfo;
+
+struct SQLiteConnection {
+    // Open flags.
+    // Must be kept in sync with the constants defined in SQLiteDatabase.java.
+    enum {
+        OPEN_READWRITE          = 0x00000000,
+        OPEN_READONLY           = 0x00000001,
+        OPEN_READ_MASK          = 0x00000001,
+        NO_LOCALIZED_COLLATORS  = 0x00000010,
+        CREATE_IF_NECESSARY     = 0x10000000,
+    };
+
+    sqlite3* const db;
+    const int openFlags;
+    std::string path;
+    std::string label;
+
+    volatile bool canceled;
+
+    SQLiteConnection(sqlite3* db, int openFlags, const std::string& path, const std::string& label) :
+        db(db), openFlags(openFlags), path(path), label(label), canceled(false) { }
+};
 
 // Called each time a statement begins execution, when tracing is enabled.
 static void sqliteTraceCallback(void *data, const char *sql) {
@@ -168,16 +185,6 @@ static jlong nativeOpen(JNIEnv* env, jclass clazz, jstring pathStr, jint openFla
         return 0;
     }
 
-    // Register custom Android functions.
-#if 0
-    err = register_android_functions(db, UTF16_STORAGE);
-    if (err) {
-        throw_sqlite3_exception(env, db, "Could not register Android SQL functions.");
-        sqlite3_close(db);
-        return 0;
-    }
-#endif
-
     // Create wrapper object.
     SQLiteConnection* connection = new SQLiteConnection(db, openFlags, path, label);
 
@@ -208,25 +215,6 @@ static void nativeClose(JNIEnv* env, jclass clazz, jlong connectionPtr) {
 
         delete connection;
     }
-}
-
-// Called for loading an external extension
-static jint nativeLoadExtension(JNIEnv* env, jclass obj, jlong connectionPtr, jstring name) {
-    const char *nameStr = env->GetStringUTFChars(name, NULL);
-
-    int err = SQLITE_ERROR;
-    char *error = (char*)sqlite3_malloc(8);
-    SQLiteConnection* connection = reinterpret_cast<SQLiteConnection*>(connectionPtr);
-    if (connection) {
-        err = sqlite3_load_extension(connection->db, nameStr, 0, &error);
-    }
-
-    ALOGE("extension failed: %s", error);
-
-    sqlite3_free(error);
-
-    env->ReleaseStringUTFChars(name, nameStr);
-    return err;
 }
 
 // Called each time a custom function is evaluated.
@@ -310,17 +298,7 @@ static void nativeRegisterCustomFunction(JNIEnv* env, jclass clazz, jlong connec
 
 static void nativeRegisterLocalizedCollators(JNIEnv* env, jclass clazz, jlong connectionPtr,
         jstring localeStr) {
-    SQLiteConnection* connection = reinterpret_cast<SQLiteConnection*>(connectionPtr);
-
-    const char* locale = env->GetStringUTFChars(localeStr, NULL);
-#if 0
-    int err = register_localized_collators(connection->db, locale, UTF16_STORAGE);
-    env->ReleaseStringUTFChars(localeStr, locale);
-
-    if (err != SQLITE_OK) {
-        throw_sqlite3_exception(env, connection->db);
-    }
-#endif
+  /* Localized collators are not supported. */
 }
 
 static jlong nativePrepareStatement(JNIEnv* env, jclass clazz, jlong connectionPtr,
@@ -368,7 +346,6 @@ static void nativeFinalizeStatement(JNIEnv* env, jclass clazz, jlong connectionP
 
 static jint nativeGetParameterCount(JNIEnv* env, jclass clazz, jlong connectionPtr,
         jlong statementPtr) {
-    SQLiteConnection* connection = reinterpret_cast<SQLiteConnection*>(connectionPtr);
     sqlite3_stmt* statement = reinterpret_cast<sqlite3_stmt*>(statementPtr);
 
     return sqlite3_bind_parameter_count(statement);
@@ -376,7 +353,6 @@ static jint nativeGetParameterCount(JNIEnv* env, jclass clazz, jlong connectionP
 
 static jboolean nativeIsReadOnly(JNIEnv* env, jclass clazz, jlong connectionPtr,
         jlong statementPtr) {
-    SQLiteConnection* connection = reinterpret_cast<SQLiteConnection*>(connectionPtr);
     sqlite3_stmt* statement = reinterpret_cast<sqlite3_stmt*>(statementPtr);
 
     return sqlite3_stmt_readonly(statement) != 0;
@@ -384,7 +360,6 @@ static jboolean nativeIsReadOnly(JNIEnv* env, jclass clazz, jlong connectionPtr,
 
 static jint nativeGetColumnCount(JNIEnv* env, jclass clazz, jlong connectionPtr,
         jlong statementPtr) {
-    SQLiteConnection* connection = reinterpret_cast<SQLiteConnection*>(connectionPtr);
     sqlite3_stmt* statement = reinterpret_cast<sqlite3_stmt*>(statementPtr);
 
     return sqlite3_column_count(statement);
@@ -392,7 +367,6 @@ static jint nativeGetColumnCount(JNIEnv* env, jclass clazz, jlong connectionPtr,
 
 static jstring nativeGetColumnName(JNIEnv* env, jclass clazz, jlong connectionPtr,
         jlong statementPtr, jint index) {
-    SQLiteConnection* connection = reinterpret_cast<SQLiteConnection*>(connectionPtr);
     sqlite3_stmt* statement = reinterpret_cast<sqlite3_stmt*>(statementPtr);
 
     const jchar* name = static_cast<const jchar*>(sqlite3_column_name16(statement, index));
@@ -483,6 +457,12 @@ static void nativeResetStatementAndClearBindings(JNIEnv* env, jclass clazz, jlon
 }
 
 static int executeNonQuery(JNIEnv* env, SQLiteConnection* connection, sqlite3_stmt* statement) {
+    int err;
+    while( SQLITE_ROW==(err=sqlite3_step(statement)) );
+    if( err!=SQLITE_DONE ){
+      throw_sqlite3_exception(env, connection->db);
+    }
+#if 0
     int err = sqlite3_step(statement);
     if (err == SQLITE_ROW) {
         throw_sqlite3_exception(env,
@@ -490,6 +470,7 @@ static int executeNonQuery(JNIEnv* env, SQLiteConnection* connection, sqlite3_st
     } else if (err != SQLITE_DONE) {
         throw_sqlite3_exception(env, connection->db);
     }
+#endif
     return err;
 }
 
@@ -557,37 +538,6 @@ static jstring nativeExecuteForString(JNIEnv* env, jclass clazz,
 }
 
 static int createAshmemRegionWithData(JNIEnv* env, const void* data, size_t length) {
-#if 0
-    int error = 0;
-    int fd = ashmem_create_region(NULL, length);
-    if (fd < 0) {
-        error = errno;
-        ALOGE("ashmem_create_region failed: %s", strerror(error));
-    } else {
-        if (length > 0) {
-            void* ptr = mmap(NULL, length, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-            if (ptr == MAP_FAILED) {
-                error = errno;
-                ALOGE("mmap failed: %s", strerror(error));
-            } else {
-                memcpy(ptr, data, length);
-                munmap(ptr, length);
-            }
-        }
-
-        if (!error) {
-            if (ashmem_set_prot_region(fd, PROT_READ) < 0) {
-                error = errno;
-                ALOGE("ashmem_set_prot_region failed: %s", strerror(errno));
-            } else {
-                return fd;
-            }
-        }
-
-        close(fd);
-    }
-
-#endif
     jniThrowIOException(env, -1);
     return -1;
 }
@@ -921,8 +871,6 @@ static JNINativeMethod sMethods[] =
             (void*)nativeCancel },
     { "nativeResetCancel", "(JZ)V",
             (void*)nativeResetCancel },
-    { "nativeLoadExtension", "(JLjava/lang/String;)I",
-            (void*)nativeLoadExtension },
 
     { "nativeHasCodec", "()Z", (void*)nativeHasCodec },
 };

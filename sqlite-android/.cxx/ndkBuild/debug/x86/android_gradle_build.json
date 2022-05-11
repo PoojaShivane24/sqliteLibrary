@@ -1,0 +1,67 @@
+{
+  "buildFiles": [
+    "C:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Android.mk",
+    "C:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Application.mk"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\22.1.7171670\\ndk-build.cmd",
+      "NDK_PROJECT_PATH\u003dnull",
+      "APP_BUILD_SCRIPT\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Android.mk",
+      "NDK_APPLICATION_MK\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Application.mk",
+      "APP_ABI\u003dx86",
+      "NDK_ALL_ABIS\u003dx86",
+      "NDK_DEBUG\u003d1",
+      "APP_PLATFORM\u003dandroid-16",
+      "NDK_OUT\u003dC:/Users/AVITA/work/sqliteLibrary/sqliteLibrary/sqlite-android/build/intermediates/ndkBuild/debug/obj",
+      "NDK_LIBS_OUT\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\build\\intermediates\\ndkBuild\\debug\\lib",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\22.1.7171670\\ndk-build.cmd",
+    "NDK_PROJECT_PATH\u003dnull",
+    "APP_BUILD_SCRIPT\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Android.mk",
+    "NDK_APPLICATION_MK\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Application.mk",
+    "APP_ABI\u003dx86",
+    "NDK_ALL_ABIS\u003dx86",
+    "NDK_DEBUG\u003d1",
+    "APP_PLATFORM\u003dandroid-16",
+    "NDK_OUT\u003dC:/Users/AVITA/work/sqliteLibrary/sqliteLibrary/sqlite-android/build/intermediates/ndkBuild/debug/obj",
+    "NDK_LIBS_OUT\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\build\\intermediates\\ndkBuild\\debug\\lib",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "sqliteX-debug-x86": {
+      "buildCommandComponents": [
+        "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\22.1.7171670\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Application.mk",
+        "APP_ABI\u003dx86",
+        "NDK_ALL_ABIS\u003dx86",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:/Users/AVITA/work/sqliteLibrary/sqliteLibrary/sqlite-android/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\build\\intermediates\\ndkBuild\\debug\\lib",
+        "C:/Users/AVITA/work/sqliteLibrary/sqliteLibrary/sqlite-android/build/intermediates/ndkBuild/debug/obj/local/x86/libsqliteX.so"
+      ],
+      "toolchain": "toolchain-x86",
+      "abi": "x86",
+      "artifactName": "sqliteX",
+      "output": "C:\\Users\\AVITA\\work\\sqliteLibrary\\sqliteLibrary\\sqlite-android\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\x86\\libsqliteX.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86": {
+      "cCompilerExecutable": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\22.1.7171670\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\22.1.7171670\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

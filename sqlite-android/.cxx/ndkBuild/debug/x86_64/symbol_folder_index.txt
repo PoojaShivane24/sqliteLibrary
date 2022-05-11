@@ -1,0 +1,1 @@
+C:\Users\AVITA\work\sqliteLibrary\sqliteLibrary\sqlite-android\build\intermediates\ndkBuild\debug\obj\local\x86_64

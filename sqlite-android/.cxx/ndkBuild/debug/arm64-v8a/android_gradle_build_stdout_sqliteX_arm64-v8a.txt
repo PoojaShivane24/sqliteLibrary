@@ -1,0 +1,2 @@
+[arm64-v8a] Compile        : sqliteX <= sqlite3.c
+[arm64-v8a] SharedLibrary  : libsqliteX.so

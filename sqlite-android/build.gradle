@@ -3,13 +3,13 @@ apply plugin: 'com.novoda.bintray-release'
 
 android {
 
-    compileSdkVersion 29
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 32
+    buildToolsVersion '30.0.3'
 
     defaultConfig {
         minSdkVersion 16
         //noinspection OldTargetApi
-        targetSdkVersion 29
+        targetSdkVersion 32
         versionCode 3253
     }
 
@@ -46,11 +46,19 @@ clean {
 //Add these lines to publish library to bintray
 publish {
 
+//    userOrg ="GipSoft"
+//    groupId = 'com.github.graviton57'
+//    artifactId = 'sqlite-android'
+//    publishVersion = '3.25.3'
+//    desc = 'Custom SQLite for Android with extensions functions.'
+//    licences = ['Apache-2.0']
+//    website = 'https://github.com/graviton57/SqliteAndroid'
+
     userOrg ="GipSoft"
-    groupId = 'com.github.graviton57'
+    groupId = 'com.github.PoojaShivane24'
     artifactId = 'sqlite-android'
-    publishVersion = '3.25.3'
+    publishVersion = '3.38.4'
     desc = 'Custom SQLite for Android with extensions functions.'
     licences = ['Apache-2.0']
-    website = 'https://github.com/graviton57/SqliteAndroid'
+    website = 'https://github.com/PoojaShivane24/sqliteLibrary'
 }

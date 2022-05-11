@@ -1,0 +1,2 @@
+[x86] Compile        : sqliteX <= sqlite3.c
+[x86] SharedLibrary  : libsqliteX.so
