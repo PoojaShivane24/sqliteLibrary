@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'maven-publish'
 
 android {
 
@@ -44,21 +45,32 @@ clean {
 }
 
 //Add these lines to publish library to bintray
-publish {
-
+//publish {
+//
+////    userOrg ="GipSoft"
+////    groupId = 'com.github.graviton57'
+////    artifactId = 'sqlite-android'
+////    publishVersion = '3.25.3'
+////    desc = 'Custom SQLite for Android with extensions functions.'
+////    licences = ['Apache-2.0']
+////    website = 'https://github.com/graviton57/SqliteAndroid'
+//
 //    userOrg ="GipSoft"
-//    groupId = 'com.github.graviton57'
-//    artifactId = 'sqlite-android'
-//    publishVersion = '3.25.3'
+//    groupId = 'com.github.PoojaShivane24'
+//    artifactId = 'sqliteLibrary'
+//    publishVersion = '1.0.5'
 //    desc = 'Custom SQLite for Android with extensions functions.'
 //    licences = ['Apache-2.0']
-//    website = 'https://github.com/graviton57/SqliteAndroid'
+//    website = 'https://github.com/PoojaShivane24/sqliteLibrary'
+//}
 
-    userOrg ="GipSoft"
-    groupId = 'com.github.PoojaShivane24'
-    artifactId = 'sqliteLibrary'
-    publishVersion = '1.0.5'
-    desc = 'Custom SQLite for Android with extensions functions.'
-    licences = ['Apache-2.0']
-    website = 'https://github.com/PoojaShivane24/sqliteLibrary'
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.github.PoojaShivane24'
+            artifactId = 'sqliteLibrary'
+            version = '1.0.6'
+
+        }
+    }
 }
