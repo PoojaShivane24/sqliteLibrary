@@ -4,14 +4,14 @@
   "buildSettings": {
     "environmentVariables": []
   },
-  "cxxBuildFolder": "D:\\SqliteAndroidUpdated\\sqlite-android\\.cxx\\ndkBuild\\debug\\armeabi-v7a",
+  "cxxBuildFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\.cxx\\ndkBuild\\debug\\armeabi-v7a",
   "info": {
     "abi": "ARMEABI_V7A",
     "bitness": 32,
     "deprecated": false,
     "default": true
   },
-  "originalCxxBuildFolder": "D:\\SqliteAndroidUpdated\\sqlite-android\\.cxx\\ndkBuild\\debug\\armeabi-v7a",
+  "originalCxxBuildFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\.cxx\\ndkBuild\\debug\\armeabi-v7a",
   "variant": {
     "buildSystemArgumentList": [],
     "buildTargetSet": [],
@@ -21,20 +21,20 @@
     "isDebuggableEnabled": true,
     "module": {
       "buildSystem": "NDK_BUILD",
-      "cmakeToolchainFile": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\build\\cmake\\android.toolchain.cmake",
-      "cxxFolder": "D:\\SqliteAndroidUpdated\\sqlite-android\\.cxx",
+      "cmakeToolchainFile": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\build\\cmake\\android.toolchain.cmake",
+      "cxxFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\.cxx",
       "gradleModulePathName": ":sqlite-android",
-      "intermediatesFolder": "D:\\SqliteAndroidUpdated\\sqlite-android\\build\\intermediates",
-      "makeFile": "D:\\SqliteAndroidUpdated\\sqlite-android\\src\\main\\jni\\Android.mk",
-      "moduleBuildFile": "D:\\SqliteAndroidUpdated\\sqlite-android\\build.gradle",
-      "moduleRootFolder": "D:\\SqliteAndroidUpdated\\sqlite-android",
+      "intermediatesFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\build\\intermediates",
+      "makeFile": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\src\\main\\jni\\Android.mk",
+      "moduleBuildFile": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\build.gradle",
+      "moduleRootFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android",
       "ndkDefaultAbiList": [
         "ARMEABI_V7A",
         "ARM64_V8A",
         "X86",
         "X86_64"
       ],
-      "ndkFolder": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk",
+      "ndkFolder": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620",
       "ndkMetaAbiList": [
         {
           "abi": "ARMEABI_V7A",
@@ -63,7 +63,7 @@
       ],
       "ndkMetaPlatforms": {
         "min": 16,
-        "max": 29,
+        "max": 31,
         "aliases": {
           "20": 19,
           "25": 24,
@@ -79,7 +79,9 @@
           "O": 26,
           "O-MR1": 27,
           "P": 28,
-          "Q": 29
+          "Q": 29,
+          "R": 30,
+          "S": 31
         }
       },
       "ndkSupportedAbiList": [
@@ -89,31 +91,31 @@
         "X86_64"
       ],
       "ndkDefaultStl": "SYSTEM",
-      "ndkVersion": "21.0.6113669",
+      "ndkVersion": "23.1.7779620",
       "project": {
-        "compilerSettingsCacheFolder": "D:\\SqliteAndroidUpdated\\.cxx",
-        "cxxFolder": "D:\\SqliteAndroidUpdated\\.cxx",
+        "compilerSettingsCacheFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\.cxx",
+        "cxxFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\.cxx",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,
-        "rootBuildGradleFolder": "D:\\SqliteAndroidUpdated",
-        "sdkFolder": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk",
+        "rootBuildGradleFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary",
+        "sdkFolder": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk",
         "isPrefabEnabled": false
       },
       "splitsAbiFilterSet": [],
       "stlSharedObjectMap": {
         "LIBCXX_SHARED": {
-          "ARMEABI_V7A": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\libc++_shared.so",
-          "ARM64_V8A": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\libc++_shared.so",
-          "X86": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\i686-linux-android\\libc++_shared.so",
-          "X86_64": "C:\\Users\\sweta\\AppData\\Local\\Android\\Sdk\\ndk\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\x86_64-linux-android\\libc++_shared.so"
+          "ARMEABI_V7A": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\libc++_shared.so",
+          "ARM64_V8A": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\libc++_shared.so",
+          "X86": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\i686-linux-android\\libc++_shared.so",
+          "X86_64": "C:\\Users\\AVITA\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\x86_64-linux-android\\libc++_shared.so"
         },
         "LIBCXX_STATIC": {},
         "NONE": {},
         "SYSTEM": {}
       }
     },
-    "objFolder": "D:\\SqliteAndroidUpdated\\sqlite-android\\build\\intermediates\\ndkBuild\\debug\\obj\\local",
+    "objFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\build\\intermediates\\ndkBuild\\debug\\obj\\local",
     "variantName": "debug",
     "validAbiList": [
       "ARMEABI_V7A",
@@ -121,8 +123,8 @@
       "X86",
       "X86_64"
     ],
-    "prefabDirectory": "D:\\SqliteAndroidUpdated\\sqlite-android\\.cxx\\ndkBuild\\debug\\prefab",
+    "prefabDirectory": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\.cxx\\ndkBuild\\debug\\prefab",
     "prefabPackageDirectoryList": []
   },
-  "prefabFolder": "D:\\SqliteAndroidUpdated\\sqlite-android\\.cxx\\ndkBuild\\debug\\prefab\\armeabi-v7a"
+  "prefabFolder": "C:\\Users\\AVITA\\work\\sqlite library\\sqliteLibrary\\sqlite-android\\.cxx\\ndkBuild\\debug\\prefab\\armeabi-v7a"
 }
