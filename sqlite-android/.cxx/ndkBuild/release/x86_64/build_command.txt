@@ -1,4 +1,4 @@
-Executable : C:\Users\AVITA\AppData\Local\Android\Sdk\ndk\22.1.7171670\ndk-build.cmd
+                    Executable : C:\Users\AVITA\AppData\Local\Android\Sdk\ndk\22.1.7171670\ndk-build.cmd
 arguments : 
 NDK_PROJECT_PATH=null
 APP_BUILD_SCRIPT=C:\Users\AVITA\work\sqliteLibrary\sqliteLibrary\sqlite-android\src\main\jni\Android.mk
@@ -15,3 +15,6 @@ LOCAL_SHORT_COMMANDS=false
 -n
 jvmArgs : 
 
+
+                    Build command args: []
+                    Version: 1

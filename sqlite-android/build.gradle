@@ -56,8 +56,8 @@ publish {
 
     userOrg ="GipSoft"
     groupId = 'com.github.PoojaShivane24'
-    artifactId = 'sqlite-android'
-    publishVersion = '3.38.4'
+    artifactId = 'sqliteLibrary'
+    publishVersion = '1.0.5'
     desc = 'Custom SQLite for Android with extensions functions.'
     licences = ['Apache-2.0']
     website = 'https://github.com/PoojaShivane24/sqliteLibrary'

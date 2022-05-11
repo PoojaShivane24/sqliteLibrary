@@ -1,2 +1,1 @@
-[armeabi-v7a] Compile thumb  : sqliteX <= sqlite3.c
-[armeabi-v7a] SharedLibrary  : libsqliteX.so
+make: Nothing to be done for 'sqliteX'.

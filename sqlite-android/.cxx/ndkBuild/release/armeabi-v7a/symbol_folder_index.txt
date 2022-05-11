@@ -1,0 +1,1 @@
+C:\Users\AVITA\work\sqliteLibrary\sqliteLibrary\sqlite-android\build\intermediates\ndkBuild\release\obj\local\armeabi-v7a

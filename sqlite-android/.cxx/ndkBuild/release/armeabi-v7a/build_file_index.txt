@@ -1,0 +1,2 @@
+C:\Users\AVITA\work\sqliteLibrary\sqliteLibrary\sqlite-android\src\main\jni\Android.mk
+C:\Users\AVITA\work\sqliteLibrary\sqliteLibrary\sqlite-android\src\main\jni\Application.mk
